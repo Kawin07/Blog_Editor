@@ -32,7 +32,7 @@ npm install
 #### Server
 
 ```bash
-cd ../server
+cd server
 npm install
 ```
 
