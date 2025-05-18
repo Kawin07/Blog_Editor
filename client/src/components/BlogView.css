@@ -1,0 +1,63 @@
+/* BlogView Component Styles */
+.container {
+  margin-top: 30px;
+  position: relative; /* To position status relative to the container */
+}
+
+/* Centering the header */
+h2 {
+  text-align: center;       /* Centers the header text */
+  font-size: 2.5rem;        /* Adjust the font size of the header */
+  font-weight: bold;        /* Make the header bold */
+  color: #333;              /* Set header text color */
+  margin-bottom: 20px;      /* Add some space below the header */
+}
+
+/* Image styling for custom size */
+.image-wrapper {
+  width: 100%;              /* Ensure image container takes full width */
+  display: flex;
+  justify-content: center;  /* Center the image */
+  margin-bottom: 20px;      /* Space below image */
+}
+
+.blog-img {
+  width: 80%;              /* Custom width of the image (80% of the container) */
+  height: auto;            /* Maintain aspect ratio */
+  border-radius: 8px;      /* Rounded corners */
+  object-fit: cover;       /* Ensures image covers the container area without distortion */
+}
+
+/* Status text style - Positioned at the right bottom corner */
+.status {
+  position: absolute;      /* Position relative to the container */
+  bottom: 10px;            /* 10px from the bottom */
+  right: 20px;             /* 20px from the right */
+  font-size: 1rem;         /* Adjust font size */
+  font-style: italic;
+  color: #6c757d;          /* Gray color for the status */
+  background: rgba(255, 255, 255, 0.7); /* Optional: background to make status visible */
+  padding: 5px 10px;       /* Padding for better readability */
+  border-radius: 5px;      /* Rounded corners */
+}
+
+/* Tags styling */
+strong {
+  font-weight: bold;
+}
+
+/* Author Name and Published Time Styling */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+p strong {
+  font-weight: bold;
+}
+
+/* Spacing for content */
+p {
+  line-height: 1.6;
+  color: #333;
+}

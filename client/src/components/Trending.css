@@ -1,0 +1,23 @@
+.trending-news-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.trending-news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-img {
+  height: 160px;
+  object-fit: cover;
+}
+
+.read-more {
+  align-self: flex-start;
+}
+
+.source-label {
+  font-weight: 600;
+  color: #0d6efd;
+}
