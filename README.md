@@ -17,7 +17,7 @@ This is a full-stack blog editor application built using **React (frontend)** an
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/react-blog-editor.git
+git clone https://github.com/Kawin07/Blog_Editor.git
 cd react-blog-editor
 ````
 
