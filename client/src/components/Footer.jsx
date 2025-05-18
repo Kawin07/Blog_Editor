@@ -5,32 +5,25 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Footer Column 1: Quick Links */}
+
+        {/* Navigation Links */}
         <div className="footer-column">
           <h5>Quick Links</h5>
           <ul>
-            <li className="nav-item">
-    <Link className="nav-link" to="/">Home</Link>
-  </li>
-  <li className="nav-item">
-    <Link className="nav-link" to="/editor">New Blog</Link>
-  </li>
-  <li className="nav-item">
-    <Link className="nav-link" to="/list">My Blog</Link>
-  </li>
-  <li className="nav-item">
-    <Link className="nav-link" to="/contact">Contact</Link>
-  </li>
+            <li><Link className="nav-link" to="/">Home</Link></li>
+            <li><Link className="nav-link" to="/editor">New Blog</Link></li>
+            <li><Link className="nav-link" to="/list">My Blog</Link></li>
+            <li><Link className="nav-link" to="/contact">Contact</Link></li>
           </ul>
         </div>
 
-        {/* Footer Column 2: Social Media Links */}
+        {/* Social Media Icons */}
         <div className="footer-column">
           <h5>Follow Us</h5>
           <div className="social-icons">
             <a href="https://wa.me/+919551630758" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-whatsapp"></i>
-                </a>
+            </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
@@ -43,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer Column 3: Contact Information */}
+        {/* Contact Info */}
         <div className="footer-column">
           <h5>Contact Information</h5>
           <ul>
@@ -53,10 +46,10 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Footer Column 4: Newsletter Signup */}
+        {/* Newsletter Signup */}
         <div className="footer-column">
           <h5>Subscribe to Our Newsletter</h5>
-          <form action="#" method="POST">
+          <form>
             <input type="email" placeholder="Enter your email" required />
             <button type="submit">Subscribe</button>
           </form>

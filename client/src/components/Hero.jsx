@@ -1,6 +1,6 @@
 // client/src/components/Hero.jsx
-import banner from '../assets/banner.png'; // adjust the path
-import './Hero.css'; // import custom CSS
+import banner from '../assets/banner.png'; // Hero section background image
+import './Hero.css'; // Custom styles for hero title and section
 
 const Hero = () => {
   return (

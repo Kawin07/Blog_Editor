@@ -1,5 +1,3 @@
-
-/* Add hover effect */
 .hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -9,17 +7,16 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Make sure the list bullets are inside and centered */
 .card-body ul {
-  list-style-position: inside;  /* Ensures the bullets are inside the content */
-  padding-left: 0;  /* Remove default padding for list */
-  text-align: center;  /* Center the text and list items */
-  margin: 0;  /* Remove any margins that could disrupt centering */
+  list-style-position: inside;
+  padding-left: 0;
+  text-align: center;
+  margin: 0;
 }
 
 .card-body li {
-  display: inline-block;  /* Makes list items inline so they can be centered */
-  margin: 5px 20px;  /* Adds spacing between items */
+  display: inline-block;
+  margin: 5px 20px;
 }
 
 .btn-outline-success, .btn-outline-info, .btn-outline-danger {
@@ -27,6 +24,6 @@
 }
 
 .btn-outline-success:hover, .btn-outline-info:hover, .btn-outline-danger:hover {
-  background-color: #28a745;
+  background-color: #28a745; 
   color: white;
 }

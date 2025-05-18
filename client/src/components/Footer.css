@@ -1,4 +1,4 @@
-/* Footer Styling */
+/* Footer Base Styling */
 .footer {
   background-color: #333;
   color: white;
@@ -11,7 +11,7 @@
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
+  flex-wrap: wrap; /* Allows layout to adapt on smaller screens */
   justify-content: space-between;
   max-width: 1200px;
   width: 100%;
@@ -19,7 +19,7 @@
 }
 
 .footer-column {
-  flex: 1 1 200px; /* ✅ ensures columns shrink/grow */
+  flex: 1 1 200px; /* Responsive column sizing */
   padding: 10px;
   margin: 10px;
   box-sizing: border-box;
@@ -49,6 +49,7 @@
   color: #f1c40f;
 }
 
+/* Social Media Links */
 .social-icons a {
   color: white;
   font-size: 20px;
@@ -60,6 +61,7 @@
   color: #f1c40f;
 }
 
+/* Newsletter Subscription */
 .footer-column form {
   display: flex;
   flex-direction: column;
@@ -88,6 +90,7 @@
   background-color: #e0b90e;
 }
 
+/* Footer Bottom Info */
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
@@ -103,7 +106,7 @@
   color: #f1c40f;
 }
 
-/* ✅ Responsive adjustments for mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

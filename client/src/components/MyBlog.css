@@ -1,3 +1,4 @@
+/* Container for header elements, aligns title and button horizontally */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -5,6 +6,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Style for 'View All' button with primary blue background and hover effect */
 .view-all-btn {
   background-color: #007bff;
   border: none;
@@ -20,6 +22,7 @@
   background-color: #0056b3;
 }
 
+/* Card style with smooth hover transform and shadow for subtle elevation */
 .MyBlog-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -30,6 +33,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Blog image styling: fixed max height, full width, and cover cropping */
 .MyBlog-img {
   height: 40%;
   max-height: 160px;
@@ -37,12 +41,14 @@
   width: 100%;
 }
 
+/* Card content area with vertical layout and padding */
 .card-body {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
+/* Footer area of card for metadata, spaced horizontally */
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -51,6 +57,7 @@
   border-top: 1px solid #ddd;
 }
 
+/* Small text styling for footer metadata, with muted color */
 .card-footer small {
   color: #6c757d;
 }

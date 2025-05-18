@@ -8,19 +8,21 @@ const BlogEditor = () => {
   const [content, setContent] = useState('');
   const [tags, setTags] = useState('');
   const [image, setImage] = useState('');
-  const [author, setAuthor] = useState('');  // Added author state
+  const [author, setAuthor] = useState('');
 
+  // Convert uploaded image to base64 and store in state
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onloadend = () => {
-      setImage(reader.result); // base64 image
+      setImage(reader.result);
     };
     reader.readAsDataURL(file);
   };
 
+  // Save blog post as a draft
   const saveDraft = async () => {
     try {
       await axios.post('/save-draft', {
@@ -28,7 +30,7 @@ const BlogEditor = () => {
         content,
         tags: tags.split(','),
         image,
-        author,  // Added author to draft
+        author,
       });
       toast.success('Auto-saved draft');
     } catch (err) {
@@ -36,6 +38,7 @@ const BlogEditor = () => {
     }
   };
 
+  // Debounced auto-save to limit API calls
   const debouncedSave = useCallback(debounce(saveDraft, 5000), [title, content, tags, image, author]);
 
   useEffect(() => {
@@ -46,6 +49,7 @@ const BlogEditor = () => {
   return (
     <div className="container mt-4">
       <h2>Blog Editor</h2>
+
       <input
         type="text"
         className="form-control my-2"
@@ -53,12 +57,14 @@ const BlogEditor = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
+
       <textarea
         className="form-control my-2"
         placeholder="Content"
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
+
       <input
         type="text"
         className="form-control my-2"
@@ -66,15 +72,17 @@ const BlogEditor = () => {
         value={tags}
         onChange={(e) => setTags(e.target.value)}
       />
+
       <input
         type="text"
         className="form-control my-2"
         placeholder="Author Name"
         value={author}
-        onChange={(e) => setAuthor(e.target.value)}  // Bind author input
+        onChange={(e) => setAuthor(e.target.value)}
       />
 
       <input type="file" className="form-control my-2" onChange={handleImageChange} />
+
       {image && <img src={image} alt="Preview" style={{ maxWidth: '150px' }} className="mb-3" />}
 
       <div className="d-flex gap-2">
@@ -87,7 +95,7 @@ const BlogEditor = () => {
               content,
               tags: tags.split(','),
               image,
-              author,  // Add author to published blog
+              author,
             });
             toast.success('Blog published');
           }}

@@ -2,14 +2,14 @@
 import mongoose from 'mongoose';
 
 const newsSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  image: { type: String, required: false },  // Optional field
-  source: { type: String, required: true },
-  publishedAt: { type: Date, default: Date.now }
+  title: { type: String, required: true },         // News headline
+  description: { type: String, required: true },   // News summary/content
+  image: { type: String, required: false },        // Optional image URL/base64
+  source: { type: String, required: true },        // Source of the news
+  publishedAt: { type: Date, default: Date.now }   // Publication date
 });
 
-// Indexing the publishedAt field for performance improvements
+// Index on publishedAt for faster sorting and queries
 newsSchema.index({ publishedAt: -1 });
 
 export default mongoose.model('News', newsSchema);

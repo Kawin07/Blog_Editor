@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png'; // Adjust path based on your file structure
+import logo from '../assets/logo.png'; 
 
 const Navbar = () => {
   return (

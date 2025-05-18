@@ -4,7 +4,7 @@ import { getAllNews } from '../controllers/newsController.js';
 
 const router = express.Router();
 
-// GET /api/news → returns all or trending news articles
+// GET /api/news - Fetch all news articles
 router.get('/', getAllNews);
 
 export default router;

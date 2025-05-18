@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from '../api/axios';
-import './BlogView.css';  // Make sure to import the CSS file
+import './BlogView.css'; // Component-specific styles
 
+// Helper function to display "time ago" format
 const timeAgo = (dateString) => {
   const now = new Date();
   const then = new Date(dateString);
@@ -30,6 +31,7 @@ const BlogView = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
+  // Fetch blog data on component mount
   useEffect(() => {
     axios.get(`/${id}`).then(res => setBlog(res.data));
   }, [id]);
@@ -40,7 +42,6 @@ const BlogView = () => {
     <div className="container mt-4">
       <h2>{blog.title}</h2>
 
-      {/* Image with custom size */}
       <div className="image-wrapper mx-auto mb-3">
         <img
           src={blog.image || '/assets/img/default-avatar.png'}
@@ -49,19 +50,12 @@ const BlogView = () => {
         />
       </div>
 
-      {/* Content */}
       <p>{blog.content}</p>
-
-      {/* Tags */}
       <p><strong>Tags:</strong> {blog.tags.join(', ')}</p>
-
-      {/* Author Name */}
       <p><strong>Author:</strong> {blog.author}</p>
-
-      {/* Published Time */}
       <p><strong>Published:</strong> {timeAgo(blog.publishedAt)}</p>
 
-      {/* Status - Positioned at right bottom corner */}
+      {/* Blog status (e.g., "Draft", "Published") */}
       <div className="status">{blog.status}</div>
     </div>
   );

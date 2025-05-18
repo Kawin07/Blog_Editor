@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
 
+  // Fetch all blogs from the server
   const fetchBlogs = async () => {
     try {
       const res = await axios.get('/');
@@ -19,11 +20,12 @@ const BlogList = () => {
     fetchBlogs();
   }, []);
 
+  // Delete a blog by ID and refresh the list
   const handleDelete = async (id) => {
     try {
       await axios.delete(`/${id}`);
       toast.success('Blog deleted');
-      fetchBlogs();
+      fetchBlogs(); // Refresh after delete
     } catch (err) {
       toast.error('Error deleting blog');
     }

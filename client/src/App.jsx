@@ -12,13 +12,18 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 function App() {
   return (
     <Router>
+      {/* Navigation bar visible on all pages */}
       <Navbar />
+
+      {/* Define routes for the app */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/editor" element={<BlogEditor />} />
         <Route path="/list" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogView />} />
       </Routes>
+
+      {/* Toast notifications container */}
       <ToastContainer />
     </Router>
   );

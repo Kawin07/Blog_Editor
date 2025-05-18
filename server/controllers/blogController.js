@@ -1,5 +1,6 @@
 import Blog from '../models/Blog.js';
 
+// Save or update a blog draft
 export const saveDraft = async (req, res) => {
   const { id, title, content, tags, image } = req.body;
   try {
@@ -12,6 +13,7 @@ export const saveDraft = async (req, res) => {
       updated_at: new Date()
     };
 
+    // Update existing draft or create new one
     const blog = id
       ? await Blog.findByIdAndUpdate(id, data, { new: true })
       : await new Blog(data).save();
@@ -22,6 +24,7 @@ export const saveDraft = async (req, res) => {
   }
 };
 
+// Publish a blog post (save or update)
 export const publishBlog = async (req, res) => {
   const { id, title, content, tags, image } = req.body;
   try {
@@ -34,6 +37,7 @@ export const publishBlog = async (req, res) => {
       updated_at: new Date()
     };
 
+    // Update existing blog or create new published post
     const blog = id
       ? await Blog.findByIdAndUpdate(id, data, { new: true })
       : await new Blog(data).save();
@@ -44,6 +48,7 @@ export const publishBlog = async (req, res) => {
   }
 };
 
+// Get all blogs regardless of status
 export const getAllBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find();
@@ -53,6 +58,7 @@ export const getAllBlogs = async (req, res) => {
   }
 };
 
+// Get a single blog by ID
 export const getBlogById = async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
@@ -62,7 +68,7 @@ export const getBlogById = async (req, res) => {
   }
 };
 
-
+// Delete a blog by ID
 export const deleteBlog = async (req, res) => {
   try {
     await Blog.findByIdAndDelete(req.params.id);
@@ -71,4 +77,3 @@ export const deleteBlog = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-

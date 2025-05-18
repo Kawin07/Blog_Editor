@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import newsAxios from '../api/axiosNews'; // ✅ Use this instance
+import newsAxios from '../api/axiosNews'; // Axios instance configured for news API
 import './Trending.css';
 
+// Helper function to format date as "time ago"
 const timeAgo = (dateString) => {
   const now = new Date();
   const then = new Date(dateString);
@@ -29,9 +30,10 @@ const Trending = () => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    newsAxios.get('') // ✅ This calls http://localhost:5000/api/news/
+    // Fetch top news items on component mount
+    newsAxios.get('')
       .then(res => {
-        setNews(res.data.slice(0, 4)); // Only show top 4
+        setNews(res.data.slice(0, 4)); // Display only the top 4 news items
       })
       .catch(err => {
         console.error('Failed to fetch news:', err);
