@@ -1,10 +1,4 @@
-Thanks! Based on your development setup where you have both a **client** and a **server**, here's an updated `README.md` section that includes those instructions clearly.
 
----
-
-### ✅ Updated `README.md` with Client & Server Instructions
-
-````markdown
 # 📝 React Blog Editor (Full Stack)
 
 A full-stack blog editor application with a React frontend and Node.js/Express backend.
