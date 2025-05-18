@@ -18,7 +18,7 @@ This is a full-stack blog editor application built using **React (frontend)** an
 
 ```bash
 git clone https://github.com/Kawin07/Blog_Editor.git
-cd react-blog-editor
+cd Blog_Editor
 ````
 
 ### 2. Install Dependencies
