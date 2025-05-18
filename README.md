@@ -33,7 +33,7 @@ npm install
 #### Frontend (Client)
 
 ```bash
-cd ../client
+cd client
 npm install
 ```
 
