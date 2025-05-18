@@ -78,7 +78,7 @@ npm start
 
 ## 🖼️ UI Features
 
-* Responsive navbar & footer with `react-router-dom`
+* Responsive
 * Hero section with background image
 * Blog editor with draft/publish support
 
