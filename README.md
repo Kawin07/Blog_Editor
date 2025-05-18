@@ -36,8 +36,7 @@ npm install
 
 ### Start the Development Servers
 
-Open two terminals or use a process manager like [concurrently](https://www.npmjs.com/package/concurrently).
-
+Open two terminals
 #### Terminal 1 – Client
 
 ```bash
