@@ -74,12 +74,6 @@ npm start
 
 ---
 
-## 📬 Notes
-
-* Hero section with background image
-* React Router handles navigation (`/`, `/editor`, `/list`, `/contact`)
-* Footer and Navbar are consistent across pages
-* MongoDB URI is embedded in `.env` for assignment purposes only
 
 ---
 
