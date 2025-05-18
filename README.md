@@ -1,26 +1,3 @@
-Great! Since this is an assignment and you **need to submit your `.env` file along with the project**, here's the best way to do it **while keeping everything clean and clear for your mentor**.
-
----
-
-### ✅ Final `.env` File (include this in your repo)
-
-You **can upload this** to your GitHub repo since it's an assignment with a shared database.
-
-```env
-# .env
-MONGO_URI=mongodb+srv://kawin0275:Kawin%402005@cluster0.niwbmul.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-PORT=5000
-```
-
-> ✅ Save this as `.env` in the `/server` folder and include it in your GitHub repo (just for this assignment).
-
----
-
-### ✅ Clean README.md (Assignment Version)
-
-Here’s a simple and clear `README.md` file for submission:
-
-````markdown
 # 📝 React Blog Editor – Assignment Submission
 
 This is a full-stack blog editor application built using **React (frontend)** and **Node.js + Express + MongoDB (backend)**.
